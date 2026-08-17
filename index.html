@@ -22,11 +22,84 @@
         </div>
     </header>
 
+    <div class="tabs-container">
+        <button class="tab-btn active">Buy USDT</button>
+        <button class="tab-btn">Sell USDT</button>
+    </div>
+
     <main class="container">
-        <section class="hero">
-            <h2>Welcome to P2P Trading</h2>
-            <button onclick="alert('Trade Room Opened!')" class="cta-btn">Enter Trade Room</button>
-        </section>
+        <div class="offers-list">
+            <div class="offer-card">
+                <div class="merchant-info">
+                    <span class="merchant-name">CryptoKing_DZ</span>
+                    <span class="completion-rate">⚡ 98.5% (1420 orders)</span>
+                </div>
+                <div class="offer-details">
+                    <div class="price-box">
+                        <span class="label">Price</span>
+                        <span class="price">242.50 DZD</span>
+                    </div>
+                    <div class="limits-box">
+                        <span class="label">Available / Limit</span>
+                        <span class="value">500 USDT <br>10,000 - 50,000 DZD</span>
+                    </div>
+                </div>
+                <div class="payment-methods">
+                    <span class="tag">CCP</span>
+                    <span class="tag">BaridiMob</span>
+                </div>
+                <button onclick="openTradeModal('CryptoKing_DZ', '242.50')" class="buy-btn">Buy USDT</button>
+            </div>
+
+            <div class="offer-card">
+                <div class="merchant-info">
+                    <span class="merchant-name">FastPay_Global</span>
+                    <span class="completion-rate">⚡ 99.1% (850 orders)</span>
+                </div>
+                <div class="offer-details">
+                    <div class="price-box">
+                        <span class="label">Price</span>
+                        <span class="price">243.00 DZD</span>
+                    </div>
+                    <div class="limits-box">
+                        <span class="label">Available / Limit</span>
+                        <span class="value">1200 USDT <br>5,000 - 100,000 DZD</span>
+                    </div>
+                </div>
+                <div class="payment-methods">
+                    <span class="tag">BaridiMob</span>
+                    <span class="tag">Paysera</span>
+                </div>
+                <button onclick="openTradeModal('FastPay_Global', '243.00')" class="buy-btn">Buy USDT</button>
+            </div>
+        </div>
     </main>
+
+    <div id="tradeModal" class="modal">
+        <div class="modal-content">
+            <h3>Buy USDT from <span id="modalMerchant"></span></h3>
+            <p>Price: <span id="modalPrice"></span> DZD</p>
+            <input type="number" placeholder="Enter amount in DZD" class="trade-input">
+            <div class="modal-actions">
+                <button onclick="closeTradeModal()" class="cancel-btn">Cancel</button>
+                <button onclick="confirmTrade()" class="confirm-btn">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTradeModal(merchant, price) {
+            document.getElementById('modalMerchant').innerText = merchant;
+            document.getElementById('modalPrice').innerText = price;
+            document.getElementById('tradeModal').style.display = 'flex';
+        }
+        function closeTradeModal() {
+            document.getElementById('tradeModal').style.display = 'none';
+        }
+        function confirmTrade() {
+            alert('Order created successfully!');
+            closeTradeModal();
+        }
+    </script>
 </body>
 </html>
