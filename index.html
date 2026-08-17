@@ -17,69 +17,91 @@
         </div>
         <div class="header-icons">
             <button class="icon-btn">🔔</button>
-            <button class="icon-btn chat-badge">💬<span>3</span></button>
+            <button class="icon-btn">💬 3</button>
             <div class="user-avatar-sm">U</div>
         </div>
     </header>
 
+    <!-- Balance Card -->
+    <div class="balance-card">
+        <div class="balance-header">Total Balance 👁️</div>
+        <div class="balance-amount">€ 445.10</div>
+        <div class="balance-actions">
+            <button class="action-btn deposit-btn">⬇ Deposit</button>
+            <button class="action-btn withdraw-btn">⬆ Withdraw</button>
+        </div>
+    </div>
+
     <div class="tabs-container">
-        <button class="tab-btn active">Buy USDT</button>
-        <button class="tab-btn">Sell USDT</button>
+        <button class="tab-btn active">Marketplace</button>
+        <button class="tab-btn">My Trades</button>
+        <button class="tab-btn">Favorites</button>
     </div>
 
     <main class="container">
-        <div class="offers-list">
-            <div class="offer-card">
-                <div class="merchant-info">
-                    <span class="merchant-name">CryptoKing_DZ</span>
-                    <span class="completion-rate">⚡ 98.5% (1420 orders)</span>
-                </div>
-                <div class="offer-details">
-                    <div class="price-box">
-                        <span class="label">Price</span>
-                        <span class="price">242.50 DZD</span>
-                    </div>
-                    <div class="limits-box">
-                        <span class="label">Available / Limit</span>
-                        <span class="value">500 USDT <br>10,000 - 50,000 DZD</span>
+        <!-- Offer 1 -->
+        <div class="offer-card">
+            <div class="merchant-info">
+                <div class="merchant-left">
+                    <div class="merchant-avatar">M</div>
+                    <div>
+                        <span class="merchant-name">Merchant Pro</span> <span class="verified-badge">✔</span>
+                        <div style="font-size: 0.75rem; color: #94a3b8;">⭐ 98.7% • 126 trades</div>
                     </div>
                 </div>
-                <div class="payment-methods">
-                    <span class="tag">CCP</span>
-                    <span class="tag">BaridiMob</span>
-                </div>
-                <button onclick="openTradeModal('CryptoKing_DZ', '242.50')" class="buy-btn">Buy USDT</button>
+                <span class="online-status">● Online</span>
             </div>
+            <div class="offer-details">
+                <div>
+                    <span class="price-label">Price per USDT</span>
+                    <span class="price">0.88 EUR</span>
+                </div>
+                <div class="available-box">
+                    <span class="price-label">Available</span>
+                    <span class="available-val">523.65 USDT</span>
+                </div>
+            </div>
+            <div class="payment-methods">
+                <span class="tag">SEPA Transfer</span>
+            </div>
+            <button onclick="openTradeModal('Merchant Pro', '0.88')" class="buy-btn">Buy</button>
+        </div>
 
-            <div class="offer-card">
-                <div class="merchant-info">
-                    <span class="merchant-name">FastPay_Global</span>
-                    <span class="completion-rate">⚡ 99.1% (850 orders)</span>
-                </div>
-                <div class="offer-details">
-                    <div class="price-box">
-                        <span class="label">Price</span>
-                        <span class="price">243.00 DZD</span>
-                    </div>
-                    <div class="limits-box">
-                        <span class="label">Available / Limit</span>
-                        <span class="value">1200 USDT <br>5,000 - 100,000 DZD</span>
+        <!-- Offer 2 -->
+        <div class="offer-card">
+            <div class="merchant-info">
+                <div class="merchant-left">
+                    <div class="merchant-avatar" style="background:#1e3a8a;">A</div>
+                    <div>
+                        <span class="merchant-name">Alpha Exchange</span> <span class="verified-badge">✔</span>
+                        <div style="font-size: 0.75rem; color: #94a3b8;">⭐ 99.4% • 312 trades</div>
                     </div>
                 </div>
-                <div class="payment-methods">
-                    <span class="tag">BaridiMob</span>
-                    <span class="tag">Paysera</span>
-                </div>
-                <button onclick="openTradeModal('FastPay_Global', '243.00')" class="buy-btn">Buy USDT</button>
+                <span class="online-status">● Online</span>
             </div>
+            <div class="offer-details">
+                <div>
+                    <span class="price-label">Price per USDT</span>
+                    <span class="price">0.89 EUR</span>
+                </div>
+                <div class="available-box">
+                    <span class="price-label">Available</span>
+                    <span class="available-val">1,240.50 USDT</span>
+                </div>
+            </div>
+            <div class="payment-methods">
+                <span class="tag">Revolut</span>
+            </div>
+            <button onclick="openTradeModal('Alpha Exchange', '0.89')" class="buy-btn">Buy</button>
         </div>
     </main>
 
+    <!-- Trade Modal -->
     <div id="tradeModal" class="modal">
         <div class="modal-content">
             <h3>Buy USDT from <span id="modalMerchant"></span></h3>
-            <p>Price: <span id="modalPrice"></span> DZD</p>
-            <input type="number" placeholder="Enter amount in DZD" class="trade-input">
+            <p style="color: #94a3b8; font-size: 0.85rem;">Rate: <span id="modalPrice"></span> EUR</p>
+            <input type="number" placeholder="Enter amount in EUR" class="trade-input">
             <div class="modal-actions">
                 <button onclick="closeTradeModal()" class="cancel-btn">Cancel</button>
                 <button onclick="confirmTrade()" class="confirm-btn">Confirm Order</button>
@@ -103,3 +125,4 @@
     </script>
 </body>
 </html>
+
