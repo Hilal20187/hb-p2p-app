@@ -1,0 +1,111 @@
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#050b16;
+  color:#f1f5f9;
+  padding-bottom:40px;
+}
+
+.main-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  background:#071020;
+  border-bottom:1px solid #132238;
+}
+
+.logo-area{display:flex;align-items:center;gap:12px}
+.crown-logo{font-size:28px}
+.brand-title{margin:0;font-size:20px;color:#facc15;font-weight:bold}
+.brand-sub{margin:0;font-size:11px;color:#94a3b8}
+
+.header-icons{display:flex;align-items:center;gap:10px}
+.icon-btn{background:#0f1d32;border:1px solid #1e3557;color:white;padding:8px 10px;border-radius:10px;cursor:pointer;position:relative}
+.chat-badge span{position:absolute;top:-5px;right:-5px;background:#ef4444;color:white;font-size:10px;padding:2px 5px;border-radius:50%}
+.user-avatar-sm{width:32px;height:32px;background:#f59e0b;color:black;font-weight:bold;border-radius:50%;display:flex;align-items:center;justify-content:center}
+
+main{padding:15px}
+
+/* Balance Card */
+.balance-card{
+  background:linear-gradient(135deg,#0d1f38,#081324);
+  border:1px solid #203a5f;
+  border-radius:20px;
+  padding:20px;
+  margin-bottom:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+.balance-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.bal-title{color:#94a3b8;font-size:13px}
+.network-badge{background:#11294a;color:#38bdf8;padding:3px 8px;border-radius:6px;font-size:11px}
+.balance-amount{font-size:32px;font-weight:bold;color:white}
+.balance-crypto{color:#94a3b8;font-size:13px;margin-bottom:15px}
+.balance-actions{display:flex;gap:10px}
+.action-btn{flex:1;padding:10px;border:0;border-radius:10px;font-weight:bold;cursor:pointer}
+.action-btn.green{background:#065f46;color:#34d399}
+.action-btn.purple{background:#3b0764;color:#c084fc}
+
+/* Hero Switches */
+.hero-switches{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px}
+.hero-switch-card{display:flex;align-items:center;gap:10px;padding:15px;border-radius:16px;border:0;cursor:pointer;text-align:left}
+.hero-switch-card.buy{background:linear-gradient(135deg,#064e3b,#022c22);border:1px solid #059669;color:white}
+.hero-switch-card.sell{background:linear-gradient(135deg,#7f1d1d,#450a0a);border:1px solid #dc2626;color:white}
+.switch-icon{font-size:20px}
+.hero-switch-card strong{display:block;font-size:14px}
+.hero-switch-card span{font-size:11px;color:#cbd5e1}
+.arrow{margin-left:auto;font-size:16px}
+
+/* Tabs */
+.main-tabs{display:grid;grid-template-columns:repeat(3,1fr);background:#081324;padding:4px;border-radius:12px;margin-bottom:15px;border:1px solid #132238}
+.main-tabs button{background:transparent;border:0;padding:10px;color:#94a3b8;font-weight:bold;border-radius:8px;cursor:pointer}
+.main-tabs button.active{background:#2563eb;color:white}
+
+.page{display:none}
+.active-page{display:block}
+
+.section-header-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.section-header-row h2{margin:0;font-size:18px}
+.refresh-btn{background:transparent;border:0;color:#38bdf8;cursor:pointer;font-size:12px}
+
+/* Offer Cards */
+.offer-card{background:#091528;border:1px solid #1e3557;border-radius:16px;padding:15px;margin-bottom:12px}
+.merchant-info{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.merchant-av{width:36px;height:36px;background:#334155;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold}
+.merchant-av.gold{background:#d97706;color:black}
+.merchant-name-row{display:flex;align-items:center;gap:6px}
+.verified-blue{color:#38bdf8;font-size:12px}
+.online-badge{font-size:10px;color:#34d399;background:#064e3b;padding:2px 6px;border-radius:4px;margin-left:auto}
+.merchant-stats{margin:2px 0 0;font-size:11px;color:#94a3b8}
+
+.price-row{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:12px}
+.big-price{font-size:22px;font-weight:bold;color:white}
+.currency-label{font-size:12px;color:#94a3b8}
+.available-box{text-align:right}
+.available-box small{display:block;font-size:10px;color:#94a3b8}
+.available-box strong{font-size:13px;color:#e2e8f0}
+
+.limits-row{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#94a3b8;margin-bottom:12px}
+.payment-tag{background:#1e293b;color:#38bdf8;padding:4px 8px;border-radius:6px}
+.payment-tag.purple-tag{color:#c084fc}
+
+.trade-buy-btn{width:100%;background:#f59e0b;color:black;border:0;padding:10px;border-radius:10px;font-weight:bold;cursor:pointer}
+
+/* Create Ad Box */
+.create-ad-box{background:#091528;border:1px solid #1e3557;border-radius:16px;padding:15px;margin-top:20px}
+.create-ad-box h3{margin-top:0;font-size:16px}
+.ad-type-switch{display:flex;background:#050b16;padding:4px;border-radius:10px;margin-bottom:12px}
+.ad-type-switch button{flex:1;background:transparent;border:0;padding:8px;color:#94a3b8;font-weight:bold;border-radius:8px}
+.ad-type-switch button.active{background:#059669;color:white}
+.input-group{margin-bottom:10px}
+.input-group label{display:block;font-size:11px;color:#94a3b8;margin-bottom:4px}
+.input-with-label{display:flex;background:#050b16;border:1px solid #1e3557;border-radius:8px;align-items:center;padding:0 10px}
+.input-with-label input{flex:1;background:transparent;border:0;color:white;padding:10px 0;outline:none}
+.input-with-label span{font-size:12px;color:#94a3b8}
+.limits-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.limits-grid input{width:100%;background:#050b16;border:1px solid #1e3557;border-radius:8px;color:white;padding:10px;outline:none}
+.payment-methods-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:15px}
+.pm-btn{background:#050b16;border:1px solid #1e3557;color:#94a3b8;padding:8px;border-radius:8px;font-size:12px;cursor:pointer}
+.pm-btn.active{border-color:#f59e0b;color:#f59e0b}
+.publish-ad-btn{width:100%;background:linear-gradient(90deg,#f59e0b,#d97706);color:black;border:0;padding:12px;border-radius:10px;font-weight:bold;cursor:pointer}
