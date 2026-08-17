@@ -1,225 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>HB P2P - Secure Marketplace</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HB P2P - Secure Marketplace</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header class="main-header">
-  <div class="logo-area">
-    <div class="crown-logo">👑</div>
-    <div>
-      <h1 class="brand-title">HB P2P</h1>
-      <p class="brand-sub">Secure Marketplace</p>
-    </div>
-  </div>
-  <div class="header-icons">
-    <button class="icon-btn">🔔</button>
-    <button class="icon-btn chat-badge">💬<span>3</span></button>
-    <div class="user-avatar-sm">U</div>
-  </div>
-</header>
-
-<main>
-  <!-- Balance & Quick Actions Card -->
-  <section class="balance-card">
-    <div class="balance-header">
-      <span class="bal-title">Total Balance 👁️</span>
-      <span class="network-badge">🟡 BSC Mainnet</span>
-    </div>
-    <div class="balance-amount">€445.10</div>
-    <div class="balance-crypto">≈ 506.9476 USDT</div>
-    <div class="balance-actions">
-      <button class="action-btn green">⬇️ Deposit</button>
-      <button class="action-btn purple">⬆️ Withdraw</button>
-    </div>
-  </section>
-
-  <!-- Big Action Switchers -->
-  <div class="hero-switches">
-    <button class="hero-switch-card buy">
-      <div class="switch-icon">🛒</div>
-      <div>
-        <strong>BUY USDT</strong>
-        <span>Best prices</span>
-      </div>
-      <span class="arrow">➔</span>
-    </button>
-    <button class="hero-switch-card sell">
-      <div class="switch-icon">🏷️</div>
-      <div>
-        <strong>SELL USDT</strong>
-        <span>Instantly</span>
-      </div>
-      <span class="arrow">➔</span>
-    </button>
-  </div>
-
-  <!-- Tabs -->
-  <nav class="main-tabs">
-    <button class="active" onclick="switchTab('market', event)">Marketplace</button>
-    <button onclick="switchTab('trades', event)">My Trades</button>
-    <button onclick="switchTab('favorites', event)">Favorites</button>
-  </nav>
-
-  <!-- Marketplace Tab Content -->
-  <section id="market" class="page active-page">
-    <div class="section-header-row">
-      <h2>Top Offers</h2>
-      <button class="refresh-btn">Refresh 🔄</button>
-    </div>
-
-    <!-- Offer Card 1 -->
-    <div class="offer-card">
-      <div class="merchant-info">
-        <div class="merchant-av">M</div>
-        <div>
-          <div class="merchant-name-row">
-            <strong>Merchant Pro</strong>
-            <span class="verified-blue">✔</span>
-            <span class="online-badge">🟢 Online</span>
-          </div>
-          <p class="merchant-stats">⭐ 98.7% • 126 trades</p>
+    <header class="main-header">
+        <div class="logo-area">
+            <div class="crown-logo">👑</div>
+            <div>
+                <h1 class="brand-title">HB P2P</h1>
+                <p class="brand-sub">Secure Marketplace</p>
+            </div>
         </div>
-      </div>
-      <div class="price-row">
-        <div>
-          <span class="big-price">0.88</span>
-          <span class="currency-label">EUR USDT</span>
+        <div class="header-icons">
+            <button class="icon-btn">🔔</button>
+            <button class="icon-btn chat-badge">💬<span>3</span></button>
+            <div class="user-avatar-sm">U</div>
         </div>
-        <div class="available-box">
-          <small>Available</small>
-          <strong>523.65 USDT</strong>
-        </div>
-      </div>
-      <div class="limits-row">
-        <span>Min €10 • Max €1,000</span>
-        <span class="payment-tag">🏛️ SEPA Transfer</span>
-      </div>
-      <button class="trade-buy-btn">Buy</button>
-    </div>
+    </header>
 
-    <!-- Offer Card 2 -->
-    <div class="offer-card">
-      <div class="merchant-info">
-        <div class="merchant-av gold">A</div>
-        <div>
-          <div class="merchant-name-row">
-            <strong>Alpha Exchange</strong>
-            <span class="verified-blue">✔</span>
-            <span class="online-badge">🟢 Online</span>
-          </div>
-          <p class="merchant-stats">⭐ 99.4% • 312 trades</p>
-        </div>
-      </div>
-      <div class="price-row">
-        <div>
-          <span class="big-price">0.89</span>
-          <span class="currency-label">EUR USDT</span>
-        </div>
-        <div class="available-box">
-          <small>Available</small>
-          <strong>1,240.50 USDT</strong>
-        </div>
-      </div>
-      <div class="limits-row">
-        <span>Min €20 • Max €2,500</span>
-        <span class="payment-tag purple-tag">🟣 Revolut</span>
-      </div>
-      <button class="trade-buy-btn">Buy</button>
-    </div>
-  </section>
-
-  <!-- My Trades Tab Content -->
-  <section id="trades" class="page">
-    <h2>My Trades</h2>
-    <div class="sub-tabs">
-      <button class="active">All</button>
-      <button>Ongoing</button>
-      <button>Completed</button>
-      <button>Cancelled</button>
-    </div>
-
-    <div class="trade-box">
-      <div class="trade-top-row">
-        <span class="t-icon">🛒</span>
-        <div>
-          <strong>Buy USDT</strong>
-          <small>0.89 EUR</small>
-        </div>
-        <span class="status-ongoing">Ongoing ⏱️</span>
-      </div>
-      <div class="trade-details-grid">
-        <div><small>100.00 USDT</small></div>
-        <div><small>Amount</small><strong>100.00 USDT</strong></div>
-      </div>
-      <div class="to-pay-row">
-        <span>To Pay: <b>89.00 EUR</b></span>
-        <button class="view-details-btn">View Details</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Favorites Tab Content -->
-  <section id="favorites" class="page">
-    <h2>Favorites</h2>
-    <p class="empty-text">No favorite merchants added yet.</p>
-  </section>
-
-  <!-- Create New Ad Section Preview -->
-  <div class="create-ad-box">
-    <h3>Create New Ad</h3>
-    <div class="ad-type-switch">
-      <button class="active">Buy USDT</button>
-      <button>Sell USDT</button>
-    </div>
-    <div class="input-group">
-      <label>Price per USDT</label>
-      <div class="input-with-label">
-        <input type="text" value="0.89">
-        <span>EUR</span>
-      </div>
-    </div>
-    <div class="input-group">
-      <label>Available Amount</label>
-      <div class="input-with-label">
-        <input type="text" value="500">
-        <span>USDT</span>
-      </div>
-    </div>
-    <div class="limits-grid">
-      <div class="input-group">
-        <label>Min Amount</label>
-        <input type="text" value="50">
-      </div>
-      <div class="input-group">
-        <label>Max Amount</label>
-        <input type="text" value="500">
-      </div>
-    </div>
-    <label>Payment Methods</label>
-    <div class="payment-methods-grid">
-      <button class="pm-btn active">SEPA Transfer ✔</button>
-      <button class="pm-btn">Revolut</button>
-      <button class="pm-btn">Wise</button>
-      <button class="pm-btn">Other</button>
-    </div>
-    <button class="publish-ad-btn">✈️ Publish Ad</button>
-  </div>
-</main>
-
-<script>
-function switchTab(id, event) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
-  document.querySelectorAll('.main-tabs button').forEach(b => b.classList.remove('active'));
-
-  document.getElementById(id).classList.add('active-page');
-  event.currentTarget.classList.add('active');
-}
-</script>
-
+    <main class="container">
+        <section class="hero">
+            <h2>Welcome to P2P Trading</h2>
+            <button onclick="alert('Trade Room Opened!')" class="cta-btn">Enter Trade Room</button>
+        </section>
+    </main>
 </body>
 </html>
